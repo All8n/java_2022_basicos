@@ -16,7 +16,11 @@ public class NotasService {
 		
 		double media=0;
 		
+		
 		for(int i=0;i<notas.size();i++) {
+			/*for(double n:notas){
+			 media=media+n;
+			 } */
 			media=media+notas.size();
 		}
 		media=media/notas.size();
