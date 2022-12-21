@@ -72,12 +72,12 @@ public class PaisesMain {
 		System.out.println(ciudad.getNombre()+"-"+ciudad.getHabitantes()+"-"+ciudad.getPais());
 		
 	}
-	static void ciudadesPorPais() {
+	static Ciudad[] ciudadesPorPais(String pais) {
 		
-		String[] paises=ciudadService.ciudadesPorPais[];
+		Ciudad[] paises=ciudadService.ciudadesPorPais(pais);
 		
-		for(String p:paises) {
-			System.out.println(p);
+		for(Ciudad p:paises) {
+			System.out.println(p.getPais());
 		}
 		
 		

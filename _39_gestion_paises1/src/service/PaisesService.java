@@ -33,7 +33,7 @@ public class PaisesService {
 	
 	public ArrayList<Ciudad> ciudadesPorPais(String pais) {
 		
-		ArrayList<Ciudad> aux=new ArrayList();
+		ArrayList<Ciudad> aux=new ArrayList<>();
 		
 		for(Ciudad c:ciudades) {
 			
