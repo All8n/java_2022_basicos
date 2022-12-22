@@ -74,7 +74,7 @@ public class PaisesMain {
 	}
 	static Ciudad[] ciudadesPorPais(String pais) {
 		
-		Ciudad[] paises=ciudadService.ciudadesPorPais(pais);
+		Ciudad[] paises=ciudadService.ciudadesPorPais();
 		
 		for(Ciudad p:paises) {
 			System.out.println(p.getPais());

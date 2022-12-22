@@ -1,6 +1,7 @@
 package _41_pruebas_fechas;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Test2 {
 
@@ -21,6 +22,13 @@ public class Test2 {
 		}
 		
 		System.out.println(f1.plusMonths(8));
+		System.out.println(f1.plusDays(200));
+		System.out.println(f2.plusMonths(1));
+		DateTimeFormatter format1=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		System.out.println(f1.format(format1));
+		
+		String mf="11/11/2018";
+		LocalDate nuevaFecha= LocalDate.parse(mf,format1);
 	}
 
 }

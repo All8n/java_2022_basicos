@@ -3,6 +3,7 @@ package view;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import model.Pedidos;
@@ -12,16 +13,18 @@ public class PedidosMain {
 	
 	static PedidosService pedidosService=new PedidosService();
 
-	public static void main(String[] args) throws ParseException   {
+	public static void main(String[] args) 	   {
 		
 		Scanner sc=new Scanner(System.in);
+		
 		int opcion;
+		
 		do {
 			mostrarMenu();
+			try {
+			opcion=Integer.parseInt(sc.nextLine());//lee las opciones 
 			
-			opcion=sc.nextInt();
-			
-			switch(opcion){
+			switch(opcion){//evaluamos
 			
 			case 1:
 				nuevoPedido();
@@ -31,14 +34,26 @@ public class PedidosMain {
 				break;
 			case 3:
 				todosPedido();
-			
-		System.out.println("--Adios--");
-					
-		}
+			case 4:
 				
-		}while(opcion!=4);
+		System.out.println("--Adios--");
+			}
+			
+		}
+		catch(NumberFormatException ex) {
+			System.out.println("Debes elegir una opcion correcta  ");
+			opcion=0;//para que vuelva a generar el bucle
+		}
+			
+	
+		
+		}
+		
+		while(opcion!=4);
+		
 		
 	}
+		
 	static void mostrarMenu() {
 		System.out.println("1.- Nuevo pedido");
 		System.out.println("2.- Pedido mas reciente");
@@ -47,7 +62,7 @@ public class PedidosMain {
 	}
 
 
-	static void nuevoPedido() throws ParseException {
+	static void nuevoPedido()  {
 		
 		Scanner sc=new Scanner(System.in);
 		SimpleDateFormat format=new SimpleDateFormat("dd/MM/yyyy");	
@@ -58,11 +73,16 @@ public class PedidosMain {
 		System.out.println("Introduce nombre del producto");
 		producto=sc.nextLine();
 		System.out.println("Introduce fecha (dia/mes/año)");
+		try {
 		fecha=format.parse(sc.nextLine());
 		System.out.println("Introduce precio del pedido");
 		total=Double.parseDouble(sc.nextLine());
 		
 		pedidosService.guardarPedidos(producto, fecha, total);
+		}
+		catch(ParseException ex) {
+			System.out.println("Caracter invalidos");
+		}
 	}
 	static void pedidoReciente() {
 		Pedidos pedido=pedidosService.pedidoReciente();
