@@ -1,6 +1,5 @@
 package view;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Ciudad;
@@ -73,12 +72,12 @@ public class PaisesMain {
 		System.out.println(ciudad.getNombre()+"-"+ciudad.getHabitantes()+"-"+ciudad.getPais());
 		
 	}
-	public  ArrayList<Ciudad> ciudadesPorPais(String pais) {
+	static Ciudad[] ciudadesPorPais(String pais) {
 		
-		ArrayList<Ciudad> paises=ciudadService.ciudadesPorPais(pais);
+		Ciudad[] paises=ciudadService.ciudadesPorPais();
 		
 		for(Ciudad p:paises) {
-			System.out.println(p.getPais(p));
+			System.out.println(p.getPais());
 		}
 		
 		

@@ -9,7 +9,7 @@ import java.io.PrintStream;
 public class TestEscritura {
 
 	public static void main(String[] args) {
-		PrintStream x=null;
+		PrintStream out=null;
 		String dir="c:\\Ficheros\\dias.txt";
 		/*try {
 			

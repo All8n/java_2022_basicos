@@ -2,8 +2,8 @@ package view;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import model.Pedidos;
@@ -94,8 +94,10 @@ public class PedidosMain {
 	}
 	static void todosPedido() {
 		
-		Pedidos[] todos =pedidosService.todos();
+		ArrayList<Pedidos> todos=pedidosService.todos();
+		
 		for(Pedidos p:todos) {
+			
 			System.out.println("Producto: "+p.getProducto());
 			System.out.println("Fecha: "+p.getFecha());
 			System.out.println("Precio: "+p.getTotal());
