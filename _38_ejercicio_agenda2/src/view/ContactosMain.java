@@ -15,7 +15,7 @@ public class ContactosMain {
 		Scanner sc=new Scanner(System.in);
 		int opcion;
 		do {
-			mostraMenu();
+			mostraMenu();	
 			opcion=sc.nextInt();//le la opcion elegida
 			switch(opcion) {//evaluamos la opcion
 			
@@ -43,7 +43,7 @@ public class ContactosMain {
 	}
 	static void mostraMenu() {
 		
-		System.out.println("1.- Nuevo Contacto");
+		System.out.println("1.- Nuevo Contacto¡");
 		System.out.println("2.- Buscar Contacto");
 		System.out.println("3.- Borrar Contacto");
 		System.out.println("4.- Mostrar Nombres");
@@ -94,7 +94,7 @@ public class ContactosMain {
 	static void mostrarNombres() {
 		
 		String[] nombres=agendaService.nombres();
-		//for(int i=0;i<nombres.length;i++);
+		//	
 		
 		for(String n:nombres) {
 				System.out.println(n);

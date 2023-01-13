@@ -31,16 +31,16 @@ public class Loteria {
 
 	static boolean repetido(int numero, int[] array, int cont) {
 
-		boolean res=false;
-		for(int i=0;i<cont;i++) {//recorremos el array  hasta la ultima posicion ocupada
-			
-			if(array[i]==numero) {
-				res=true;
-				break;//si encontramos el numero dentro del array, abandonamos el for
+			boolean res=false;	
+			for(int i=0;i<cont;i++) {//recorremos el array  hasta la ultima posicion ocupada
 				
+				if(array[i]==numero) {
+					res=true;
+					break;//si encontramos el numero dentro del array, abandonamos el for
+					
+				}
 			}
-		}
-		return res;
+			return res;
 		
 	}
 		

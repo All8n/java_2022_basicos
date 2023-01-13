@@ -75,10 +75,9 @@ public class PaisesMain {
 	}
 	public  ArrayList<Ciudad> ciudadesPorPais(String pais) {
 		
-		ArrayList<Ciudad> paises=ciudadService.ciudadesPorPais(pais);
 		
 		for(Ciudad p:paises) {
-			System.out.println(p.getPais(p));
+			System.out.println(p);
 		}
 		
 		
