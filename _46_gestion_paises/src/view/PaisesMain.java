@@ -28,6 +28,8 @@ public class PaisesMain {
 				break;
 			case 3:
 				ciudadesPorPais();
+				break;
+			case 4:
 			
 		System.out.println("--Adios--");
 					
@@ -74,12 +76,13 @@ public class PaisesMain {
 	}
 	static Ciudad[] ciudadesPorPais(String pais) {
 		
-		Ciudad[] paises=ciudadService.ciudadesPorPais();
+		Ciudad[] paises=ciudadService.ciudadesPorPais(pais);
 		
 		for(Ciudad p:paises) {
+			if(p.getPais().equals(paises)) {
 			System.out.println(p.getPais());
 		}
-		
+		}
 		
 	}
 }

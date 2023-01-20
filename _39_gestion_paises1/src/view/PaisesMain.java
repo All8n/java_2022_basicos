@@ -74,12 +74,17 @@ public class PaisesMain {
 		
 	}
 	public  ArrayList<Ciudad> ciudadesPorPais(String pais) {
+		ArrayList<Ciudad> auxiliar=new ArrayList<>();
+
 		
-		
-		for(Ciudad p:paises) {
-			System.out.println(p);
+		for(Ciudad p:auxiliar) {
+			if(p.getPais().equals(pais)) {
+				
+			}
 		}
-		
+		System.out.println(pais);
+
 		
 	}
+	
 }

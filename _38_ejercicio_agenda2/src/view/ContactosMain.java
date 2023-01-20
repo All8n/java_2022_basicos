@@ -42,7 +42,7 @@ public class ContactosMain {
 
 	}
 	static void mostraMenu() {
-		
+			
 		System.out.println("1.- Nuevo Contacto¡");
 		System.out.println("2.- Buscar Contacto");
 		System.out.println("3.- Borrar Contacto");
